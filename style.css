@@ -5,7 +5,9 @@ html, body {
 }
 
 body {
-    background: linear-gradient(135deg, #f8fafc 0%, #e3eafc 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #dbe4f8 100%);
+    background-size: 200% 200%;
+    animation: softDrift 30s ease-in-out infinite;
     color: #222;
     font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
     min-height: 100vh;
@@ -149,7 +151,11 @@ h1 {
     from { opacity: 0; transform: translateY(40px);}
     to { opacity: 1; transform: none;}
 }
-
+@keyframes softDrift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 /* Responsive: allow scrolling on small screens */
 @media (max-width: 900px) {
     html, body {
@@ -166,3 +172,4 @@ h1 {
         max-width: 98vw;
     }
 }
+
