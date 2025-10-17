@@ -1,69 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Friday Quiet — Internal Release v1.0</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Serif for poem, Sans for note -->
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8">
+    <title>Friday Quiet - Internal Release v1.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="app" class="page">
-
-    <header class="site-header">
-      <h1 class="site-title">Friday Quiet<span class="ver"> // Internal Release v1.0</span></h1>
-      <button id="pauseToggle" class="btn ghost" aria-pressed="false" aria-label="Pause the page">Pause</button>
-      <button id="soundToggle" class="btn ghost" aria-pressed="false" aria-label="Toggle ambient sound">Hear the quiet</button>
-    </header>
-
     <main>
-      <!-- POEM -->
-      <section class="poem-wrap" aria-labelledby="poem-title">
-        <h2 id="poem-title" class="visually-hidden">Poem</h2>
-
-        <!-- We wrap each line for reveal. Keep exact text. -->
-        <article id="poem" class="poem" data-reveal="true">
-          <p>
-            Most of all I love the quiet places, a sleeping house just before everyone wakes,<br/>
-            a car ride with the radio off, an unexpected lull in conversation.<br/>
-            It’s not that I’m in love with silence, it’s that most things that are worth paying attention to<br/>
-            can only be heard when it’s quite enough.<br/>
-            The bird calls can predict thunderstorms.<br/>
-            The way a person breathes can tell truths their words can’t.<br/>
-            The most honest I love you I ever heard wasn’t in words but in a glance.<br/>
-            Noise will tell you a story. Noise will fill up a room.<br/>
-            But a moment of quiet; that will tell you the truth.
-          </p>
-          <footer class="poem-credit">— Whitney Hanson (written at 22 years old)</footer>
-        </article>
-      </section>
-
-      <!-- NOTE -->
-      <section class="note-wrap" aria-labelledby="note-title">
-        <h2 id="note-title" class="visually-hidden">Team Note</h2>
-        <article class="note">
-          <p>By the end of the week, <strong>the noise</strong> gets loud: the Teams pings, the inbox drama, the spreadsheets screaming for formulas that stopped making sense by Wednesday. But tucked inside all that chaos is a strange kind of mercy; the <strong>quiet</strong> that waits on the other side.</p>
-
-          <p>This weekend, listen for it. The car ride with no radio. The pause before the house wakes. The breath that doesn’t have to be measured in 15-minute increments. That’s not nothing; that’s the world catching its breath and letting you catch yours too.</p>
-
-          <p>We earned this silence. Every ping, every spreadsheet meltdown, every caffeine-fueled miracle that somehow made it to Friday bought us this peace.</p>
-
-          <p class="anchor"><strong>May your Teams notifications fall silent long enough for the world to hear your own breath</strong></p>
-        </article>
-      </section>
+        <h1>Friday Quiet <span class="version">- Internal Release v1.0</span></h1>
+        <section class="poem">
+            <blockquote>
+                “Most of all I love the quiet places, a sleeping house just before everyone wakes, a car ride with the radio off, an unexpected lull in conversation. It’s not that I’m in love with silence, it’s that most things that are worth paying attention to can only be heard when it’s quite enough. The bird calls can predict thunderstorms. The way a person breathes can tell truths their words can’t. The most honest I love you I ever heard wasn’t in words but in a glance. Noise will tell you a story. Noise will fill up a room. But a moment of quiet; that will tell you the truth.”
+                <footer>— Whitney Hanson</footer>
+            </blockquote>
+        </section>
+        <section class="reflection">
+            <p>
+                By the end of the week, the <strong class="highlight">noise</strong> gets loud: the Teams pings, the inbox drama, the spreadsheets screaming for formulas that stopped making sense by Wednesday. But tucked inside all that chaos is a strange kind of mercy; the <strong class="highlight">quiet</strong> that waits on the other side.
+            </p>
+            <p>
+                This weekend, listen for it. The car ride with no radio. The pause before the house wakes. The breath that doesn’t have to be measured in 15-minute increments. That’s not nothing; that’s the world catching its breath and letting you catch yours too.
+            </p>
+            <p>
+                We earned this silence; every ping, every spreadsheet meltdown, every caffeine-fueled miracle that somehow made it to Friday bought us this peace.
+            </p>
+        <section class="wish">
+    <span class="teams-text"><strong>May your Teams notifications fall silent long enough for you to hear your own breath</strong></span>
+</section>
+        </section>
+<section class="breathe-section">
+    <button id="breathe-btn" aria-label="Take a deep breath">Take a deep breath</button>
+            <div id="breathe-animation" aria-hidden="true">
+                <div class="breathe-circle"></div>
+                <div class="breathe-text"></div>
+            </div>
+        </section>
     </main>
-
-    <footer class="site-footer">
-      <div id="exhale">This page exhaled last at —</div>
-      <div class="fineprint">Press “Pause” to freeze motion and hush audio. Toggle “Hear the quiet” for a gentle ambient layer. No jump scares. Promise.</div>
+    <footer>
+        <div class="footer-fade"></div>
     </footer>
-  </div>
-
-  <!-- Ambient audio: add your own tiny loop at /audio/ambient.mp3 -->
-  <audio id="ambient" src="./audio/ambient.mp3" preload="auto" loop></audio>
-
-  <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
