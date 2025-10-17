@@ -70,6 +70,7 @@ h1 {
     margin-top: 2.5em;
     text-align: center;
     animation: fadeInUp 1.2s 0.6s both;
+    margin-bottom: 32px;
 }
 
 .breathe-section {
@@ -150,4 +151,5 @@ h1 {
         padding: 24px 8px 16px 8px;
     }
    }
+
 
