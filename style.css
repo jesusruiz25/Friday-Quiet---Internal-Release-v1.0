@@ -1,35 +1,32 @@
-﻿body {
-    background: linear-gradient(135deg, #f8fafc 0%, #e3eafc 100%);
-    color: #222;
-    font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
-    margin: 0;
-    min-height: 100vh;
-    overflow: hidden;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-main {
-    max-width: 700px;
-    margin: 0;
-    background: rgba(255,255,255,0.95);
-    border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(60,72,88,0.08);
-    padding: 40px 32px 32px 32px;
-    animation: fadeIn 1.2s ease;
-    padding-bottom: 64px;
-    max-height: 100vh;
-    overflow: auto;
-}
-
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #f8fafc 0%, #e3eafc 100%);
+    color: #222;
+    font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+    min-height: 100vh;
+    /* Center content and lock scrolling on desktop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
+
+main {
+    max-width: 700px;
+    width: 100%;
+    background: rgba(255,255,255,0.97);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(60,72,88,0.08);
+    padding: 40px 32px 32px 32px;
+    animation: fadeIn 1.2s ease;
+    margin: 0;
+}
+
 h1 {
     font-size: 2.2em;
     font-weight: 700;
@@ -59,7 +56,7 @@ h1 {
 .poem blockquote footer {
     font-style: normal;
     color: #6a7ba2;
-    margin-top: 0;
+    margin-top: 0.8em;
     text-align: right;
     font-size: 0.95em;
 }
@@ -77,13 +74,6 @@ h1 {
     background: #eaf1ff;
     border-radius: 4px;
     padding: 0 4px;
-}
-
-.wish {
-    margin-top: 2.5em;
-    text-align: center;
-    animation: fadeInUp 1.2s 0.6s both;
-    margin-bottom: 32px;
 }
 
 .breathe-section {
@@ -136,16 +126,18 @@ h1 {
     min-height: 1.5em;
 }
 
+.wish {
+    margin-top: 2.5em;
+    text-align: center;
+    font-size: 1.08em;
+    font-weight: 600;
+}
+
 .footer-fade {
     height: 40px;
     background: linear-gradient(to top, #e3eafc 80%, transparent 100%);
     margin-top: 40px;
     border-radius: 0 0 18px 18px;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.2; }
 }
 
 @keyframes fadeIn {
@@ -158,13 +150,19 @@ h1 {
     to { opacity: 1; transform: none;}
 }
 
-/* Responsive */
-@media (max-width: 800px) {
-    main {
-        padding: 24px 8px 16px 8px;
+/* Responsive: allow scrolling on small screens */
+@media (max-width: 900px) {
+    html, body {
+        overflow: auto;
+        height: auto;
     }
-   }
-
-
-
-
+    body {
+        display: block;
+        min-height: 100vh;
+    }
+    main {
+        margin: 24px 0;
+        padding: 24px 8px 16px 8px;
+        max-width: 98vw;
+    }
+}
