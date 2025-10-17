@@ -1,0 +1,151 @@
+﻿body {
+    background: linear-gradient(135deg, #f8fafc 0%, #e3eafc 100%);
+    color: #222;
+    font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 700px;
+    margin: 48px auto 0 auto;
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(60,72,88,0.08);
+    padding: 40px 32px 32px 32px;
+    animation: fadeIn 1.2s ease;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.2em;
+    text-align: center;
+    color: #2a4d8f;
+}
+
+.version {
+    font-size: 0.6em;
+    font-weight: 400;
+    color: #6a7ba2;
+}
+
+.poem blockquote {
+    font-style: italic;
+    color: #3a3a3a;
+    border-left: 4px solid #b3c6e0;
+    margin: 1.5em 0;
+    padding: 0.5em 1.5em;
+    background: #f4f8ff;
+    border-radius: 8px;
+    animation: fadeInUp 1.2s 0.2s both;
+}
+
+.poem blockquote footer {
+    font-style: normal;
+    color: #6a7ba2;
+    margin-top: 0.8em;
+    text-align: right;
+    font-size: 0.95em;
+}
+
+.reflection p {
+    font-size: 1.13em;
+    line-height: 1.7;
+    margin: 1.2em 0;
+    animation: fadeInUp 1.2s 0.4s both;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #2a4d8f;
+    background: #eaf1ff;
+    border-radius: 4px;
+    padding: 0 4px;
+}
+
+.wish {
+    margin-top: 2.5em;
+    text-align: center;
+    animation: fadeInUp 1.2s 0.6s both;
+}
+
+.breathe-section {
+    margin-top: 2.5em;
+    text-align: center;
+}
+
+#breathe-btn {
+    background: #eaf1ff;
+    color: #2a4d8f;
+    border: none;
+    border-radius: 24px;
+    padding: 12px 32px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(60,72,88,0.08);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    margin-bottom: 18px;
+}
+#breathe-btn:hover, #breathe-btn:focus {
+    background: #d1e0ff;
+    color: #1a2d5c;
+    transform: scale(1.04);
+    outline: none;
+}
+
+#breathe-animation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.breathe-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #b3c6e0 0%, #eaf1ff 100%);
+    margin-bottom: 12px;
+    opacity: 0.8;
+    transition: width 4s cubic-bezier(.4,0,.2,1), height 4s cubic-bezier(.4,0,.2,1);
+}
+
+.breathe-text {
+    font-size: 1.2em;
+    color: #2a4d8f;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    min-height: 1.5em;
+}
+
+.footer-fade {
+    height: 40px;
+    background: linear-gradient(to top, #e3eafc 80%, transparent 100%);
+    margin-top: 40px;
+    border-radius: 0 0 18px 18px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: none;}
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: none;}
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    main {
+        padding: 24px 8px 16px 8px;
+    }
+   }
