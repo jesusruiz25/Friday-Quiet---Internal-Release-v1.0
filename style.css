@@ -59,7 +59,7 @@ h1 {
 .poem blockquote footer {
     font-style: normal;
     color: #6a7ba2;
-    margin-top: 0.8em;
+    margin-top: 0;
     text-align: right;
     font-size: 0.95em;
 }
@@ -164,6 +164,7 @@ h1 {
         padding: 24px 8px 16px 8px;
     }
    }
+
 
 
 
