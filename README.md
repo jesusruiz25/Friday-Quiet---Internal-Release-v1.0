@@ -1,4 +1,4 @@
-# Friday Quiet - Internal Release v1.0
+# The Friday Shift v1.0
 
 A calm, modern, animated single-page site for celebrating the quiet moments at the end of the week.
 
